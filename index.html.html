@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>BioClean Gel Natural</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+header {
+    background: linear-gradient(90deg, #2ecc71, #27ae60);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+nav {
+    background-color: #27ae60;
+    display: flex;
+    justify-content: center;
+}
+
+nav a {
+    color: white;
+    padding: 15px 25px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    background-color: #1e8449;
+}
+
+section {
+    padding: 40px 20px;
+    display: none;
+    min-height: 90vh;
+}
+
+section.active {
+    display: block;
+}
+
+.container {
+    max-width: 1300px;
+    margin: auto;
+}
+
+/* CARD PRO */
+.card-horizontal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    margin: 30px 0;
+    gap: 30px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card-horizontal:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 10px 25px rgba(0,0,0,0.2);
+}
+
+.card-texto {
+    flex: 1;
+}
+
+.card-img {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.card-img img {
+    width: 100%;
+    max-width: 400px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* BOTONES */
+button {
+    background-color: #2ecc71;
+    color: white;
+    border: none;
+    padding: 10px 14px;
+    cursor: pointer;
+    border-radius: 6px;
+    margin: 5px;
+}
+
+button:hover {
+    background-color: #27ae60;
+}
+
+.eliminar {
+    background-color: #e74c3c;
+}
+
+/* CANTIDAD */
+.cantidad {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+footer {
+    background-color: #2ecc71;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+/* RESPONSIVO */
+@media(max-width:768px){
+    .card-horizontal {
+        flex-direction: column;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>BioClean Gel Natural</h1>
+<p>Protección natural para tus manos</p>
+</header>
+
+<nav>
+<a href="#" onclick="mostrarSeccion('inicio')">Inicio</a>
+<a href="#" onclick="mostrarSeccion('especificaciones')">Especificaciones</a>
+<a href="#" onclick="mostrarSeccion('comprar')">Comprar</a>
+<a href="#" onclick="mostrarSeccion('carrito')">Carrito</a>
+</nav>
+
+<!-- INICIO -->
+<section id="inicio" class="active">
+    <div class="hero">
+        <div class="hero-content">
+            <h1>BioClean Gel Natural</h1>
+            <p>Protección antibacterial natural premium para tus manos</p>
+            <button onclick="mostrarSeccion('comprar')">Comprar ahora</button>
+        </div>
+    </div>
+</section>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* 🔥 HERO PROFESIONAL */
+.hero {
+    height: 90vh;
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
+    url('https://espores.org/wp-content/uploads/ESPORES/Investigaci/biomimetisme/biomime2.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.hero-content {
+    max-width: 700px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.hero-content h1 {
+    font-size: 50px;
+    margin-bottom: 15px;
+}
+
+.hero-content p {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.hero-content button {
+    background-color: #2ecc71;
+    border: none;
+    padding: 15px 25px;
+    font-size: 18px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.hero-content button:hover {
+    background-color: #27ae60;
+}
+
+/* Animación */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+</style>
+</head>
+
+<body>
+
+<section class="hero">
+    <div class="hero-content">
+        <h1>BioClean Gel Natural</h1>
+        <p>Protección antibacterial natural premium para tus manos</p>
+        <button onclick="alert('Ir a comprar')">Comprar ahora</button>
+    </div>
+</section>
+
+<!-- ESPECIFICACIONES -->
+<section id="especificaciones">
+<div class="container">
+
+<div class="card-horizontal">
+<div class="card-texto">
+<h3>Ingredientes</h3>
+<ul>
+<li>Alcohol 70%</li>
+<li>Aloe vera</li>
+<li>Glicerina</li>
+<li>Aceites esenciales</li>
+</ul>
+</div>
+<div class="card-img">
+<img src="ingredientes.jpg">
+</div>
+</div>
+
+<div class="card-horizontal">
+<div class="card-texto">
+<h3>Beneficios</h3>
+<ul>
+<li>Elimina bacterias</li>
+<li>Hidrata la piel</li>
+<li>Secado rápido</li>
+</ul>
+</div>
+<div class="card-img">
+<img src="beneficios-.webp">
+</div>
+</div>
+
+<div class="card-horizontal">
+<div class="card-texto">
+<h3>Contenido</h3>
+<ul>
+<li>Presentación de 100 ml</li>
+<li>Presentación de 250 ml</li>
+<li>Presentación de 500 ml</li>
+</ul>
+</div>
+<div class="card-img">
+<img src="contenidos-11.webp">
+</div>
+</div>
+
+<div class="card-horizontal">
+<div class="card-texto">
+<h3>Modo de uso</h3>
+<p>
+Aplicar una pequeña cantidad en las manos y frotar hasta que se evapore completamente.
+No enjuagar.
+</p>
+</div>
+<div class="card-img">
+<img src="modos-uso.jpg">
+</div>
+</div>
+
+<div class="card-horizontal">
+<div class="card-texto">
+<h3>Precauciones</h3>
+<ul>
+<li>Evitar el contacto con los ojos</li>
+<li>No ingerir</li>
+<li>Mantener fuera del alcance de los niños</li>
+</ul>
+</div>
+<div class="card-img">
+<img src="evitar-contacto.jpg">
+</div>
+</div>
+
+
+</div>
+</section>
+
+<!-- COMPRAR -->
+<section id="comprar">
+<div class="container">
+
+<div class="card-horizontal">
+<div class="card-texto">
+<h3>Gel 100 ml</h3>
+<p>$50 MXN</p>
+<button onclick="agregarCarrito('Gel 100 ml', 50)">Agregar</button>
+</div>
+<div class="card-img">
+<img src="100ml.png">
+</div>
+</div>
+
+<div class="card-horizontal">
+<div class="card-texto">
+<h3>Gel 250 ml</h3>
+<p>$90 MXN</p>
+<button onclick="agregarCarrito('Gel 250 ml', 90)">Agregar</button>
+</div>
+<div class="card-img">
+<img src="250ml.png">
+</div>
+</div>
+
+<div class="card-horizontal">
+<div class="card-texto">
+<h3>Gel 500 ml</h3>
+<p>$150 MXN</p>
+<button onclick="agregarCarrito('Gel 500 ml', 150)">Agregar</button>
+</div>
+<div class="card-img">
+<img src="500ml.png">
+</div>
+</div>
+
+</div>
+</section>
+
+<!-- CARRITO -->
+<section id="carrito">
+<div class="container">
+
+<h2>Carrito</h2>
+<ul id="listaCarrito"></ul>
+
+<h3>Total: $<span id="total">0</span> MXN</h3>
+
+<button onclick="comprarWhatsApp()">Comprar por WhatsApp</button>
+
+</div>
+</section>
+
+<footer>
+<p>© 2026 BioClean Gel Natural - Todos los derechos reservados</p>
+</footer>
+
+<script>
+let carrito = [];
+
+function mostrarSeccion(seccion) {
+document.querySelectorAll("section").forEach(sec => {
+sec.classList.remove("active");
+});
+document.getElementById(seccion).classList.add("active");
+}
+
+function agregarCarrito(nombre, precio) {
+let producto = carrito.find(p => p.nombre === nombre);
+
+if(producto){
+producto.cantidad++;
+}else{
+carrito.push({nombre, precio, cantidad:1});
+}
+
+actualizarCarrito();
+}
+
+function cambiarCantidad(index, cambio){
+carrito[index].cantidad += cambio;
+
+if(carrito[index].cantidad <= 0){
+carrito.splice(index,1);
+}
+
+actualizarCarrito();
+}
+
+function actualizarCarrito(){
+let lista = document.getElementById("listaCarrito");
+let total = 0;
+
+lista.innerHTML = "";
+
+carrito.forEach((p, index)=>{
+total += p.precio * p.cantidad;
+
+let li = document.createElement("li");
+li.innerHTML = `
+${p.nombre} - $${p.precio} x ${p.cantidad}
+
+<div class="cantidad">
+<button onclick="cambiarCantidad(${index}, -1)">-</button>
+<button onclick="cambiarCantidad(${index}, 1)">+</button>
+<button class="eliminar" onclick="cambiarCantidad(${index}, -${p.cantidad})">Eliminar</button>
+</div>
+`;
+
+lista.appendChild(li);
+});
+
+document.getElementById("total").textContent = total;
+}
+
+function comprarWhatsApp(){
+let mensaje = "Hola, quiero comprar:%0A";
+
+carrito.forEach(p=>{
+mensaje += `${p.nombre} x${p.cantidad} - $${p.precio * p.cantidad}%0A`;
+});
+
+let total = document.getElementById("total").textContent;
+mensaje += `%0ATotal: $${total} MXN`;
+
+window.open(`https://wa.me/521XXXXXXXXXX?text=${mensaje}`);
+}
+</script>
+
+</body>
+</html>
